@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="quiz.js"></script>
+    <title>Phishing Simulation #5</title>
+</head>
+<body>
+    <header>
+		<div class="logo">
+			<img src="image/logo.png" alt="PhishFighters Logo">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">What Is Phishing</a></li>
+				<li><a href="#">Red Flags</a></li>
+				<li><a href="#">Spot the Phish</a></li>
+				<li><a href="#">Resources</a></li>
+			</ul>
+		</nav>
+    </header>
+    <div id="simBanner">
+        <!-- Banner (Description, Instructions) -->
+        <h1><br>Spot the Phish</h1>
+        <h3>Below is a simulated phishing attempt. <br>Hover over anything you might find suspicious to learn more.<br>
+            Each simulation contains three tips for spotting phishing.<br><br></h2>
+    </div>
+    <div class="score-container" style="position: fixed; top: 10px; right: 10px; background: #fff; padding: 10px; border: 1px solid #333;">
+        Current Score: <span id="score-board">0</span>
+    </div>
+    <table class="main-table" role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td align="center">
+                    <a href="http://rnychoice-support.upsupport.c0m/reschedule" class="simulatedLink image-hotspot-container " style="position: relative; display: inline-block;">
+                        <img src="smishing.png" alt="" width="816"
+                            style="display: block; border: 0; height: auto; max-width: 100%;">
+                        <div class="hotspot phish-trigger" title="Large businesses generally use shortened numbers to sent text alerts; 10-digit numbers are readily available for scammers' use. This particular number starts with an international code, which can also be a sign of smishing."
+                            style="position: absolute; top: 15%; left: 38%; width: 25%; height: 7%; z-index: 100;">
+                        </div>
+                        <div class="hotspot phish-trigger" title="The entire URL is included in the text message, but some phishing attempts will use shortened URLs."
+                            style="position: absolute; top: 42%; left: 2%; width: 55%; height: 10%; z-index: 100;;">
+                        </div>
+                        <div class="hotspot phish-trigger" title="Replying to text messages from unknown numbers indicates that your phone number is active and may be resold."
+                            style="position: absolute; top: 52%; left: 4%; width: 50%; height: 7%; z-index: 100;">
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+	</div>
+    <div class="progress-nav-container">
+        <div class="progress-track">
+            <div class="progress-fill" style="width: 100%;"></div>
+        </div>
+        <a href="results.html" class="nav-arrow-btn">&#10140;</a>
+    </div>
+    <script>
+        document.querySelector('.simulatedLink').addEventListener('click', function(e){
+            e.preventDefault();
+        });
+    </script>
+</body>
+<footer>
+	<p>&copy; 2025 PhishFighters. ICT 435 - Group 3.</p> 
+</footer>
+</html>

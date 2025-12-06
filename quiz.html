@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PhishFighters</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo1">
+			<img src="image/logo.png" alt="PhishFighters Logo">
+			<p class="tagline"><b>PhishFighters</b></p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="what-is-phishing.html">What Is Phishing</a></li>
+				<li><a href="red-flags.html">Red Flags</a></li>
+				<li><a href="quiz.html">Spot the Phish</a></li>
+				<li><a href="resources.html">Defense & Recovery</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="page-banner">
+			<h1>Spot the Phish</h1>
+		</section>
+		<section class="content-section text-container">
+			<p style="position: relative; overflow: auto">
+			<img src="questionmarks.png" style="float:left; width:127px; height:178px; padding:0px 15px">
+			This interactive quiz consists of simulated phishing emails and text messages.<br>
+			Click on the suspicious parts of the messages. You will earn points for each 
+			red flag identified. Hover over links for more information. Click the next arrow after finding all three indications on each page or to skip to the next page.<br><br>
+			Notes: The following emails and text messages are simulations and are safe to click. Do not click on actual emails that you find suspicious. <br>
+				Hovering over links before clicking will typically display the URL in the lower left corner of your browser. 
+				Because this is a simulation, your browser may prevent URLS from displaying in this area; URLs will be shown in popup bubble when a link is moused over.
+			</p>
+		</section>
+		<a href="simemail1.html" class="center"">Start Quiz</a>
+	</main>
+	<script>
+    	// Set score to zero
+    	sessionStorage.setItem('quizScore', 0);
+	</script>
+
+	<footer>
+		<p>&copy; 2025 PhishFighters. ICT 435 - Group 3.</p> 
+	</footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PhishFighters</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="quiz.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo1">
+			<img src="image/logo.png" alt="PhishFighters Logo">
+			<p class="tagline"><b>PhishFighters</b></p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="what-is-phishing.html">What Is Phishing</a></li>
+				<li><a href="red-flags.html">Red Flags</a></li>
+				<li><a href="quiz.html">Spot the Phish</a></li>
+				<li><a href="resources.html">Defense & Recovery</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="page-banner">
+			<h1>Spot the Phish </h1>
+		</section>
+		<section class="content-section text-container">
+			<h1>Final Score: <span id="final-score"></span></h1> 
+			<p id="feedback-msg"></p>
+		</section>
+	</main>
+	<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get score from memory
+        const score = parseInt(sessionStorage.getItem('quizScore')) || 0;
+
+        // Display score
+        const scoreDisplay = document.getElementById('final-score');
+        if (scoreDisplay) {
+            scoreDisplay.innerText = score;
+        }
+
+        // Congratulations if perfect score, else encouraging message
+        const feedbackDisplay = document.getElementById('feedback-msg');
+        if (feedbackDisplay) {
+            if (score == 15) { 
+                feedbackDisplay.innerText = "Congratulations! You have spotted all the phishing indicators. Knowing the signs of phishing is crucial and will undoubtedly be beneficial in the future.";
+                feedbackDisplay.style.color = "#00C28A";
+                feedbackDisplay.style.fontWeight = "bold";
+				feedbackDisplay.style.fontSize = "x-large";
+            } else {
+                feedbackDisplay.innerText = "You missed some indicators of phishing, but no worries! By reviewing the resources and information on this website, the signs of phishing in emails, texts, and vishing will be easier to spot. Try again!";
+                feedbackDisplay.style.color = "black";
+                feedbackDisplay.style.fontWeight = "bold";
+				feedbackDisplay.style.fontSize = "x-large";
+            }
+        }
+    });
+	</script>
+	<footer>
+		<p>&copy; 2025 PhishFighters. ICT 435 - Group 3.</p> 
+	</footer>
+</body>
+</html>

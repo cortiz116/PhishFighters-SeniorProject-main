@@ -76,7 +76,7 @@
                 <td style="padding: 20px;">
                     <!-- Email Content -->
                     <p class="tooltip phish-trigger">Dear GMail User, <span class="tooltiptext">Phishers often use generic greetings.</span></p>
-                    <span class="tooltip phish-trigger"> <br><br>You have reached the storage limit for your GMail account.
+                    <span class="tooltip phish-trigger"><br>You have reached the storage limit for your GMail account.
                      <a href="" id="simulatedLink" data-url="600gle.com/storage">Upgrade your storage</a>
                       now to insure all email are received.<br><br>Google<br>GMail Costumer Service Division
                       <span class="tooltiptext">600gle.com/storage<br><br>Typos and grammar errors are often found in phishing emails.</span>
@@ -90,28 +90,30 @@
         </table>
     </center>
 	</div>
-	<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const now = new Date();
-        const timestampMs = now.getTime();
-        const readableDate = now.toLocaleString(); 
-
-        const displayElement = document.getElementById('timestamp-display');
-        if (displayElement) {
-            displayElement.innerHTML = `${readableDate}`;
-        }
-    });
-	</script>
     <div class="progress-nav-container">
         <div class="progress-track">
             <div class="progress-fill" style="width: 80%;"></div>
         </div>
         <a href="simsms.html" class="nav-arrow-btn">&#10140;</a>
     </div>
-    <script>
-    document.querySelector('.simulatedLink').addEventListener('click', function(e){
-            e.preventDefault();
-        });
+	<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Date & timestamp
+        const now = new Date();
+        const readableDate = now.toLocaleString(); 
+        const displayElement = document.getElementById('timestamp-display');
+        if (displayElement) {
+            displayElement.innerHTML = `${readableDate}`;
+        }
+
+        // Disable link click
+        const phishLink = document.getElementById('simulatedLink');
+        if (phishLink) {
+            phishLink.addEventListener('click', function(e){
+                e.preventDefault();
+            });
+        }
+    });
     </script>
 </body>
 <footer>

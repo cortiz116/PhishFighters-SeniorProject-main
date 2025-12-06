@@ -37,7 +37,7 @@
 	<div class="email-header">
     	<div class="header-line">
         	<span class="header-label">From: PayPal</span>
-        	<span class="tooltip phish-trigger"">&lt;no-reply@PayPa15ervices.com&gt;
+        	<span class="tooltip phish-trigger">&lt;no-reply@PayPa15ervices.com&gt;
 				<span class="tooltiptext">By checking the email address, we can see that PayPal didn't send this email. However, phishers have been known to use legimate services to send scam emails.
                 </span>
 			</span>
@@ -73,7 +73,7 @@
             </tr>
             <!-- Email content -->
             <tr>
-                <td style="padding: 20px;">
+                <td style="padding: 10px;">
                     <!-- Email Content -->
                     <p>Your payment of $375.50 US to Davide WoodShop (Transaction #300ujyf8ZTDj845qM497w) is not yet complete. 
                     <br><br>Click 
@@ -93,28 +93,30 @@
         </table>
     </center>
 	</div>
-	<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const now = new Date();
-        const timestampMs = now.getTime();
-        const readableDate = now.toLocaleString(); 
-
-        const displayElement = document.getElementById('timestamp-display');
-        if (displayElement) {
-            displayElement.innerHTML = `${readableDate}`;
-        }
-    });
-	</script>
     <div class="progress-nav-container">
         <div class="progress-track">
             <div class="progress-fill" style="width: 60%;"></div>
         </div>
         <a href="simemail4.html" class="nav-arrow-btn">&#10140;</a>
     </div>
-    <script>
-    document.querySelector('.simulatedLink').addEventListener('click', function(e){
-            e.preventDefault();
-        });
+	<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Date & timestamp
+        const now = new Date();
+        const readableDate = now.toLocaleString(); 
+        const displayElement = document.getElementById('timestamp-display');
+        if (displayElement) {
+            displayElement.innerHTML = `${readableDate}`;
+        }
+
+        // Disable link click
+        const phishLink = document.getElementById('simulatedLink');
+        if (phishLink) {
+            phishLink.addEventListener('click', function(e){
+                e.preventDefault();
+            });
+        }
+    });
     </script>
 </body>
 <footer>

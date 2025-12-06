@@ -102,20 +102,22 @@
     </div>
 	<script>
     document.addEventListener('DOMContentLoaded', (event) => {
+        // Date & timestamp
         const now = new Date();
-        const timestampMs = now.getTime();
         const readableDate = now.toLocaleString(); 
         const displayElement = document.getElementById('timestamp-display');
         if (displayElement) {
             displayElement.innerHTML = `${readableDate}`;
         }
-    });
-	</script>		
 
-    <script>
-    document.querySelector('.simulatedLink').addEventListener('click', function(e){
-            e.preventDefault();
-        });
+        // Disable link click
+        const phishLink = document.getElementById('simulatedLink');
+        if (phishLink) {
+            phishLink.addEventListener('click', function(e){
+                e.preventDefault();
+            });
+        }
+    });
     </script>
 </body>
 <footer>

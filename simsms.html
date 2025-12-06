@@ -60,9 +60,13 @@
         <a href="results.html" class="nav-arrow-btn">&#10140;</a>
     </div>
     <script>
-        document.querySelector('.simulatedLink').addEventListener('click', function(e){
-            e.preventDefault();
-        });
+        // Disable link click
+        const phishLink = document.getElementById('simulatedLink');
+        if (phishLink) {
+            phishLink.addEventListener('click', function(e){
+                e.preventDefault();
+            });
+        }
     </script>
 </body>
 <footer>

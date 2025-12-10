@@ -7,22 +7,11 @@ body {
 
 header {
 	display: flex;
+	justify-content: space-between; 
 	align-items: center;
 	padding: 20px 50px;
 	border-bottom: 1px solid #eee;
 	background: #9ed2c6;
-}
-
-.logo img {
-	height: 75px;
-	width: auto;
-	margin-right: auto;
-}
-
-.logo1 img {
-	height: 50px;
-	width: auto;
-	margin-right: auto;
 }
 
 .tagline {
@@ -66,6 +55,14 @@ nav a {
 .hero p {
 	font-size: 18px;
 	color: #666;
+}
+
+.hero h1,
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+    max-width: 900px;
 }
 
 footer {

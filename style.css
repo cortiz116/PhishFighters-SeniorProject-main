@@ -146,7 +146,8 @@ footer {
 
 .feature-icon-img {
     height: 50px;
-    width: auto; 
+    width: auto;
+	vertical-align: middle;
 }
 
 .feature-item {

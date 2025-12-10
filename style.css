@@ -415,3 +415,31 @@ hotspot {
     transform: translateX(5px);
     color: #000;
 }
+
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between the items */
+    padding: 30px 20px;
+    background-color: #f4f4f9; /* Light, calming background */
+    border-top: 1px solid #eee;
+    margin-top: -50px; /* Pulls it up slightly into the hero section */
+}
+
+.indicator-item {
+    text-align: center;
+    max-width: 150px;
+}
+
+.indicator-item .icon {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.indicator-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+}

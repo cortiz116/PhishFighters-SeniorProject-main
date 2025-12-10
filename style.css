@@ -446,3 +446,13 @@ main {
     margin: 0; 
     clear: both; 
 }
+
+.logo img {
+	height: 75px; 
+	width: auto;
+}
+
+.logo1 img {
+	height: 50px; 
+	width: auto;
+}

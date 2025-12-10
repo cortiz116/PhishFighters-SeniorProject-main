@@ -14,6 +14,16 @@ header {
 	background: #9ed2c6;
 }
 
+.logo img {
+	height: 75px; 
+	width: auto;
+}
+
+.logo1 img {
+	height: 50px; 
+	width: auto;
+}
+
 .tagline {
 	margin-top: 5px;
 	font-size: 10px;
@@ -198,8 +208,8 @@ footer {
     transform: rotate(45deg); 
 }
 
-.feature-header img {
-    height: 50px;
+.feature-header .feature-icon {
+    height: 50px;
 }
 
 .text-container {
@@ -447,12 +457,3 @@ main {
     clear: both; 
 }
 
-.logo img {
-	height: 75px; 
-	width: auto;
-}
-
-.logo1 img {
-	height: 50px; 
-	width: auto;
-}

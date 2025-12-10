@@ -146,8 +146,15 @@ footer {
 
 .feature-icon-img {
     height: 50px;
-    width: auto;
-	vertical-align: middle;
+    width: auto; 
+    object-fit: contain; 
+    flex-shrink: 0;
+}
+
+.feature-header img {
+    align-self: center;
+    margin-right: 15px; 
+    max-height: 50px; 
 }
 
 .feature-item {
